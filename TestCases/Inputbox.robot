@@ -6,7 +6,7 @@ ${browser}  chrome
 ${url}  https://demo.nopcommerce.com/
 
 *** Test Cases ***
-LoginTest
+Input Box
     open browser    ${url}  ${browser}
     maximize browser window
     title should be    nopCommerce demo store
