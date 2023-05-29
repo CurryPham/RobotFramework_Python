@@ -1,133 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230529 21:28:38.435" rpa="false" schemaversion="3">
-<suite id="s1" name="ImplicitWait" source="D:\Robot\TestCases\ImplicitWait.robot">
-<test id="s1-t1" name="RegTest" line="9">
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230529 22:03:25.191" rpa="false" schemaversion="3">
+<suite id="s1" name="CloseAll" source="D:\Robot\TestCases\CloseAll.robot">
+<test id="s1-t1" name="LoginTest" line="8">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<arg>https://demo.nopcommerce.com</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230529 21:28:38.644" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
-<msg timestamp="20230529 21:28:38.655" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230529 21:28:38.644" endtime="20230529 21:28:41.492"/>
+<msg timestamp="20230529 22:03:25.403" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com'.</msg>
+<msg timestamp="20230529 22:03:25.414" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230529 22:03:25.403" endtime="20230529 22:03:28.032"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230529 21:28:41.493" endtime="20230529 21:28:41.618"/>
+<status status="PASS" starttime="20230529 22:03:28.033" endtime="20230529 22:03:28.161"/>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>nopCommerce demo store</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230529 21:28:41.632" level="INFO">Page title is 'nopCommerce demo store'.</msg>
-<status status="PASS" starttime="20230529 21:28:41.619" endtime="20230529 21:28:41.632"/>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://facebook.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230529 22:03:28.162" level="INFO">Opening browser 'chrome' to base url 'https://facebook.com'.</msg>
+<msg timestamp="20230529 22:03:28.184" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230529 22:03:28.162" endtime="20230529 22:03:30.726"/>
 </kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>xpath://a[@class='ico-login']</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230529 21:28:41.633" level="INFO">Clicking link 'xpath://a[@class='ico-login']'.</msg>
-<status status="PASS" starttime="20230529 21:28:41.633" endtime="20230529 21:28:42.549"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230529 22:03:30.726" endtime="20230529 22:03:30.847"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:Email</arg>
-<arg>test@gmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230529 21:28:42.550" level="INFO">Typing text 'test@gmail.com' into text field 'id:Email'.</msg>
-<status status="PASS" starttime="20230529 21:28:42.549" endtime="20230529 21:28:42.652"/>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230529 22:03:30.847" endtime="20230529 22:03:43.244"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:Password</arg>
-<arg>123456</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230529 21:28:42.652" level="INFO">Typing text '123456' into text field 'id:Password'.</msg>
-<status status="PASS" starttime="20230529 21:28:42.652" endtime="20230529 21:28:42.738"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://button[text()='Log in']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230529 21:28:42.739" level="INFO">Clicking element 'xpath://button[text()='Log in']'.</msg>
-<status status="PASS" starttime="20230529 21:28:42.739" endtime="20230529 21:28:43.557"/>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>xpath://a[@class='ico-account']</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230529 21:28:43.559" level="INFO">Clicking link 'xpath://a[@class='ico-account']'.</msg>
-<status status="PASS" starttime="20230529 21:28:43.558" endtime="20230529 21:28:43.903"/>
-</kw>
-<kw name="Get Selenium Implicit Wait" library="SeleniumLibrary">
-<var>${implicittime}</var>
-<doc>Gets the implicit wait value used by Selenium.</doc>
-<msg timestamp="20230529 21:28:43.904" level="INFO">${implicittime} = 0 seconds</msg>
-<status status="PASS" starttime="20230529 21:28:43.903" endtime="20230529 21:28:43.904"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${implicittime}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230529 21:28:43.904" endtime="20230529 21:28:43.905"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>10</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20230529 21:28:43.905" endtime="20230529 21:28:43.906"/>
-</kw>
-<kw name="Get Selenium Implicit Wait" library="SeleniumLibrary">
-<var>${implicittime}</var>
-<doc>Gets the implicit wait value used by Selenium.</doc>
-<msg timestamp="20230529 21:28:43.907" level="INFO">${implicittime} = 10 seconds</msg>
-<status status="PASS" starttime="20230529 21:28:43.906" endtime="20230529 21:28:43.907"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${implicittime}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230529 21:28:43.907" endtime="20230529 21:28:43.907"/>
-</kw>
-<kw name="Select Radio Button" library="SeleniumLibrary">
-<arg>Gender2</arg>
-<arg>M</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<msg timestamp="20230529 21:28:43.908" level="INFO">Selecting 'M' from radio button 'Gender2'.</msg>
-<msg timestamp="20230529 21:28:54.069" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20230529 21:28:54.069" level="FAIL">No radio button with name 'Gender2' and value 'M' found.</msg>
-<status status="FAIL" starttime="20230529 21:28:43.908" endtime="20230529 21:28:54.072"/>
-</kw>
-<kw name="Select Radio Button" library="SeleniumLibrary">
-<arg>Gender</arg>
-<arg>F</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<status status="NOT RUN" starttime="20230529 21:28:54.073" endtime="20230529 21:28:54.073"/>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>DateOfBirthDay</arg>
-<arg>10</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="NOT RUN" starttime="20230529 21:28:54.074" endtime="20230529 21:28:54.074"/>
-</kw>
-<kw name="Select From List By Index" library="SeleniumLibrary">
-<arg>DateOfBirthMonth</arg>
-<arg>12</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<status status="NOT RUN" starttime="20230529 21:28:54.074" endtime="20230529 21:28:54.074"/>
-</kw>
-<kw name="Select From List By Value" library="SeleniumLibrary">
-<arg>DateOfBirthYear</arg>
-<arg>2000</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="NOT RUN" starttime="20230529 21:28:54.075" endtime="20230529 21:28:54.075"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20230529 21:28:54.076" endtime="20230529 21:28:54.076"/>
-</kw>
-<status status="FAIL" starttime="20230529 21:28:38.643" endtime="20230529 21:28:54.076">No radio button with name 'Gender2' and value 'M' found.</status>
+<status status="PASS" starttime="20230529 22:03:25.402" endtime="20230529 22:03:43.245"/>
 </test>
-<status status="FAIL" starttime="20230529 21:28:38.437" endtime="20230529 21:28:54.077"/>
+<status status="PASS" starttime="20230529 22:03:25.193" endtime="20230529 22:03:43.250"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="ImplicitWait">ImplicitWait</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="CloseAll">CloseAll</stat>
 </suite>
 </statistics>
 <errors>
