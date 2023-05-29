@@ -6,7 +6,7 @@ ${browser}  chrome
 ${url}  https://demo.nopcommerce.com/
 
 *** Test Cases ***
-Radio button
+RegTest
     open browser    ${url}  ${browser}
     maximize browser window
     title should be    nopCommerce demo store
@@ -16,12 +16,14 @@ Radio button
     click element    xpath://button[text()='Log in']
     click link    xpath://a[@class='ico-account']
 
+    set selenium timeout    10
+    wait until page contains    Registerr   #5
+    set selenium speed    1
     select radio button    Gender      M
-    sleep    1
     select radio button    Gender      F
-    sleep    1
-
-    select checkbox    Newsletter
+    select from list by label    DateOfBirthDay     10
+    select from list by index    DateOfBirthMonth     12
+    select from list by value    DateOfBirthYear     2000
 
     close browser
 
