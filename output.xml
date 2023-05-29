@@ -1,81 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230530 04:40:09.566" rpa="false" schemaversion="3">
-<suite id="s1" name="NavigationalKeywords" source="D:\Robot\TestCases\NavigationalKeywords.robot">
-<test id="s1-t1" name="NavigaitionTest" line="9">
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230530 04:46:09.032" rpa="false" schemaversion="3">
+<suite id="s1" name="CaptureScreen" source="D:\Robot\TestCases\CaptureScreen.robot">
+<test id="s1-t1" name="CaptureScreen" line="9">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://google.com/</arg>
-<arg>chrome</arg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230530 04:40:09.781" level="INFO">Opening browser 'chrome' to base url 'https://google.com/'.</msg>
-<msg timestamp="20230530 04:40:09.792" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230530 04:40:09.781" endtime="20230530 04:40:12.909"/>
+<msg timestamp="20230530 04:46:09.239" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<msg timestamp="20230530 04:46:09.249" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230530 04:46:09.239" endtime="20230530 04:46:11.791"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230530 04:40:12.910" endtime="20230530 04:40:13.032"/>
+<kw name="loginToApplication">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[@class='ico-login']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230530 04:46:11.793" level="INFO">Clicking link 'xpath://a[@class='ico-login']'.</msg>
+<status status="PASS" starttime="20230530 04:46:11.792" endtime="20230530 04:46:12.785"/>
 </kw>
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${log}</var>
-<doc>Returns the current browser window URL.</doc>
-<msg timestamp="20230530 04:40:13.040" level="INFO">${log} = https://www.google.com/</msg>
-<status status="PASS" starttime="20230530 04:40:13.032" endtime="20230530 04:40:13.040"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Email</arg>
+<arg>test@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230530 04:46:12.785" level="INFO">Typing text 'test@gmail.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20230530 04:46:12.785" endtime="20230530 04:46:12.866"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${log}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230530 04:40:13.041" endtime="20230530 04:40:13.042"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Password</arg>
+<arg>123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230530 04:46:12.866" level="INFO">Typing text '123456' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20230530 04:46:12.866" endtime="20230530 04:46:12.938"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230530 04:40:16.058" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230530 04:40:13.043" endtime="20230530 04:40:16.058"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button[text()='Log in']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230530 04:46:12.938" level="INFO">Clicking element 'xpath://button[text()='Log in']'.</msg>
+<status status="PASS" starttime="20230530 04:46:12.938" endtime="20230530 04:46:13.313"/>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>https://bing.com/</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230530 04:40:16.059" level="INFO">Opening url 'https://bing.com/'</msg>
-<status status="PASS" starttime="20230530 04:40:16.059" endtime="20230530 04:40:16.833"/>
+<status status="PASS" starttime="20230530 04:46:11.792" endtime="20230530 04:46:13.313"/>
 </kw>
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${log}</var>
-<doc>Returns the current browser window URL.</doc>
-<msg timestamp="20230530 04:40:16.837" level="INFO">${log} = https://www.bing.com/?toWww=1&amp;redig=82E5503A87834761BB42712DC9F0CFCF</msg>
-<status status="PASS" starttime="20230530 04:40:16.833" endtime="20230530 04:40:16.837"/>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>xpath://div[@class='header-logo']//img</arg>
+<arg>Logo.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230530 04:46:13.399" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Logo.png"&gt;&lt;img src="Logo.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230530 04:46:13.313" endtime="20230530 04:46:13.399"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${log}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230530 04:40:16.838" endtime="20230530 04:40:16.838"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230530 04:40:19.849" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230530 04:40:16.838" endtime="20230530 04:40:19.849"/>
-</kw>
-<kw name="Go Back" library="SeleniumLibrary">
-<doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="PASS" starttime="20230530 04:40:19.850" endtime="20230530 04:40:19.871"/>
-</kw>
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${log}</var>
-<doc>Returns the current browser window URL.</doc>
-<msg timestamp="20230530 04:40:19.879" level="INFO">${log} = https://www.google.com/</msg>
-<status status="PASS" starttime="20230530 04:40:19.871" endtime="20230530 04:40:19.879"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${log}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230530 04:40:19.880" endtime="20230530 04:40:19.880"/>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>Page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230530 04:46:13.498" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Page.png"&gt;&lt;img src="Page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230530 04:46:13.399" endtime="20230530 04:46:13.498"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230530 04:40:19.880" endtime="20230530 04:40:21.989"/>
+<status status="PASS" starttime="20230530 04:46:13.499" endtime="20230530 04:46:15.598"/>
 </kw>
-<status status="PASS" starttime="20230530 04:40:09.780" endtime="20230530 04:40:21.990"/>
+<status status="PASS" starttime="20230530 04:46:09.238" endtime="20230530 04:46:15.599"/>
 </test>
-<status status="PASS" starttime="20230530 04:40:09.568" endtime="20230530 04:40:21.991"/>
+<status status="PASS" starttime="20230530 04:46:09.034" endtime="20230530 04:46:15.600"/>
 </suite>
 <statistics>
 <total>
@@ -84,7 +67,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="NavigationalKeywords">NavigationalKeywords</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="CaptureScreen">CaptureScreen</stat>
 </suite>
 </statistics>
 <errors>
