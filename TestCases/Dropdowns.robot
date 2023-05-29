@@ -16,12 +16,12 @@ Input Box
     click element    xpath://button[text()='Log in']
     click link    xpath://a[@class='ico-account']
 
-    select radio button    Gender      M
+    select from list by label    DateOfBirthDay     10
     sleep    1
-    select radio button    Gender      F
+    select from list by index    DateOfBirthMonth     12
     sleep    1
-
-    select checkbox    Newsletter
+    select from list by value    DateOfBirthYear     2000
+    sleep    1
 
     close browser
 
