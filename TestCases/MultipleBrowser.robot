@@ -6,7 +6,7 @@ Library    SeleniumLibrary
 *** Variables ***
 
 *** Test Cases ***
-Close Browser
+Multi Browser
     open browser    https://google.com/    chrome
     maximize browser window
     sleep    1

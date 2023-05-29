@@ -1,82 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230530 04:30:38.488" rpa="false" schemaversion="3">
-<suite id="s1" name="MultipleBrowser" source="D:\Robot\TestCases\MultipleBrowser.robot">
-<test id="s1-t1" name="Close Browser" line="9">
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230530 04:40:09.566" rpa="false" schemaversion="3">
+<suite id="s1" name="NavigationalKeywords" source="D:\Robot\TestCases\NavigationalKeywords.robot">
+<test id="s1-t1" name="NavigaitionTest" line="9">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://google.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230530 04:30:38.700" level="INFO">Opening browser 'chrome' to base url 'https://google.com/'.</msg>
-<msg timestamp="20230530 04:30:38.711" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230530 04:30:38.700" endtime="20230530 04:30:41.357"/>
+<msg timestamp="20230530 04:40:09.781" level="INFO">Opening browser 'chrome' to base url 'https://google.com/'.</msg>
+<msg timestamp="20230530 04:40:09.792" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230530 04:40:09.781" endtime="20230530 04:40:12.909"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230530 04:30:41.358" endtime="20230530 04:30:41.472"/>
+<status status="PASS" starttime="20230530 04:40:12.910" endtime="20230530 04:40:13.032"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${log}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230530 04:40:13.040" level="INFO">${log} = https://www.google.com/</msg>
+<status status="PASS" starttime="20230530 04:40:13.032" endtime="20230530 04:40:13.040"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${log}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230530 04:40:13.041" endtime="20230530 04:40:13.042"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
+<arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230530 04:30:42.481" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20230530 04:30:41.472" endtime="20230530 04:30:42.481"/>
+<msg timestamp="20230530 04:40:16.058" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230530 04:40:13.043" endtime="20230530 04:40:16.058"/>
 </kw>
-<kw name="Open Browser" library="SeleniumLibrary">
+<kw name="Go To" library="SeleniumLibrary">
 <arg>https://bing.com/</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230530 04:30:42.484" level="INFO">Opening browser 'chrome' to base url 'https://bing.com/'.</msg>
-<msg timestamp="20230530 04:30:42.497" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230530 04:30:42.482" endtime="20230530 04:30:44.472"/>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230530 04:40:16.059" level="INFO">Opening url 'https://bing.com/'</msg>
+<status status="PASS" starttime="20230530 04:40:16.059" endtime="20230530 04:40:16.833"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230530 04:30:44.473" endtime="20230530 04:30:44.595"/>
-</kw>
-<kw name="Switch Browser" library="SeleniumLibrary">
-<arg>1</arg>
-<doc>Switches between active browsers using ``index_or_alias``.</doc>
-<status status="PASS" starttime="20230530 04:30:44.595" endtime="20230530 04:30:44.595"/>
-</kw>
-<kw name="Get Title" library="SeleniumLibrary">
-<var>${title1}</var>
-<doc>Returns the title of the current page.</doc>
-<msg timestamp="20230530 04:30:44.602" level="INFO">${title1} = Google</msg>
-<status status="PASS" starttime="20230530 04:30:44.596" endtime="20230530 04:30:44.602"/>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${log}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230530 04:40:16.837" level="INFO">${log} = https://www.bing.com/?toWww=1&amp;redig=82E5503A87834761BB42712DC9F0CFCF</msg>
+<status status="PASS" starttime="20230530 04:40:16.833" endtime="20230530 04:40:16.837"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${title1}</arg>
+<arg>${log}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230530 04:30:44.603" endtime="20230530 04:30:44.603"/>
-</kw>
-<kw name="Switch Browser" library="SeleniumLibrary">
-<arg>2</arg>
-<doc>Switches between active browsers using ``index_or_alias``.</doc>
-<status status="PASS" starttime="20230530 04:30:44.604" endtime="20230530 04:30:44.604"/>
-</kw>
-<kw name="Get Title" library="SeleniumLibrary">
-<var>${title2}</var>
-<doc>Returns the title of the current page.</doc>
-<msg timestamp="20230530 04:30:44.610" level="INFO">${title2} = Bing</msg>
-<status status="PASS" starttime="20230530 04:30:44.604" endtime="20230530 04:30:44.610"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${title2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230530 04:30:44.610" endtime="20230530 04:30:44.611"/>
+<status status="PASS" starttime="20230530 04:40:16.838" endtime="20230530 04:40:16.838"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
+<arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230530 04:30:45.617" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20230530 04:30:44.611" endtime="20230530 04:30:45.617"/>
+<msg timestamp="20230530 04:40:19.849" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230530 04:40:16.838" endtime="20230530 04:40:19.849"/>
 </kw>
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20230530 04:30:45.617" endtime="20230530 04:30:58.571"/>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20230530 04:40:19.850" endtime="20230530 04:40:19.871"/>
 </kw>
-<status status="PASS" starttime="20230530 04:30:38.699" endtime="20230530 04:30:58.572"/>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${log}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230530 04:40:19.879" level="INFO">${log} = https://www.google.com/</msg>
+<status status="PASS" starttime="20230530 04:40:19.871" endtime="20230530 04:40:19.879"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${log}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230530 04:40:19.880" endtime="20230530 04:40:19.880"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230530 04:40:19.880" endtime="20230530 04:40:21.989"/>
+</kw>
+<status status="PASS" starttime="20230530 04:40:09.780" endtime="20230530 04:40:21.990"/>
 </test>
-<status status="PASS" starttime="20230530 04:30:38.490" endtime="20230530 04:30:58.577"/>
+<status status="PASS" starttime="20230530 04:40:09.568" endtime="20230530 04:40:21.991"/>
 </suite>
 <statistics>
 <total>
@@ -85,7 +84,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="MultipleBrowser">MultipleBrowser</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="NavigationalKeywords">NavigationalKeywords</stat>
 </suite>
 </statistics>
 <errors>

@@ -6,7 +6,7 @@ Library    SeleniumLibrary
 *** Variables ***
 
 *** Test Cases ***
-Close Browser
+Tabbed Browser
     open browser    https://testautomationpractice.blogspot.com/    chrome
     maximize browser window
     click element    xpath://*[@id="Tabbed"]/a/button
