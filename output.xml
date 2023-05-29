@@ -1,38 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230529 22:03:25.191" rpa="false" schemaversion="3">
-<suite id="s1" name="CloseAll" source="D:\Robot\TestCases\CloseAll.robot">
-<test id="s1-t1" name="LoginTest" line="8">
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230529 22:11:41.043" rpa="false" schemaversion="3">
+<suite id="s1" name="Alerts" source="D:\Robot\TestCases\Alerts.robot">
+<test id="s1-t1" name="Close Browser" line="9">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://demo.nopcommerce.com</arg>
+<arg>https://testautomationpractice.blogspot.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230529 22:03:25.403" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com'.</msg>
-<msg timestamp="20230529 22:03:25.414" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230529 22:03:25.403" endtime="20230529 22:03:28.032"/>
+<msg timestamp="20230529 22:11:41.249" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<msg timestamp="20230529 22:11:41.259" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230529 22:11:41.249" endtime="20230529 22:11:46.744"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230529 22:03:28.033" endtime="20230529 22:03:28.161"/>
+<status status="PASS" starttime="20230529 22:11:46.745" endtime="20230529 22:11:46.859"/>
 </kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://facebook.com</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230529 22:03:28.162" level="INFO">Opening browser 'chrome' to base url 'https://facebook.com'.</msg>
-<msg timestamp="20230529 22:03:28.184" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230529 22:03:28.162" endtime="20230529 22:03:30.726"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button[text()='Click Me']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230529 22:11:46.860" level="INFO">Clicking element 'xpath://button[text()='Click Me']'.</msg>
+<status status="PASS" starttime="20230529 22:11:46.860" endtime="20230529 22:11:46.908"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230529 22:03:30.726" endtime="20230529 22:03:30.847"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230529 22:11:47.917" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230529 22:11:46.908" endtime="20230529 22:11:47.917"/>
 </kw>
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20230529 22:03:30.847" endtime="20230529 22:03:43.244"/>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>Press a button!</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20230529 22:11:47.918" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20230529 22:11:47.918" endtime="20230529 22:11:47.927"/>
 </kw>
-<status status="PASS" starttime="20230529 22:03:25.402" endtime="20230529 22:03:43.245"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230529 22:11:48.933" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230529 22:11:47.928" endtime="20230529 22:11:48.933"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230529 22:11:48.935" endtime="20230529 22:11:51.060"/>
+</kw>
+<status status="PASS" starttime="20230529 22:11:41.248" endtime="20230529 22:11:51.062"/>
 </test>
-<status status="PASS" starttime="20230529 22:03:25.193" endtime="20230529 22:03:43.250"/>
+<status status="PASS" starttime="20230529 22:11:41.046" endtime="20230529 22:11:51.067"/>
 </suite>
 <statistics>
 <total>
@@ -41,7 +53,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="CloseAll">CloseAll</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Alerts">Alerts</stat>
 </suite>
 </statistics>
 <errors>

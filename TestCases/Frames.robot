@@ -1,18 +1,18 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    SeleniumLibrary
+Library    SeleniumLibrary
 
 *** Variables ***
 
 *** Test Cases ***
 Close Browser
-    open browser    https://demo.nopcommerce.com    chrome
+    open browser    https://netbanking.hdfcbank.com/netbanking/    chrome
     maximize browser window
 
-    open browser    https://facebook.com    chrome
-    maximize browser window
-
-    close all browsers
+    select frame    login_page
+    unselect frame
+    close browser
 
 
 *** Keywords ***
