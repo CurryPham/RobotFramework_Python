@@ -1,50 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230529 22:11:41.043" rpa="false" schemaversion="3">
-<suite id="s1" name="Alerts" source="D:\Robot\TestCases\Alerts.robot">
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230530 04:30:38.488" rpa="false" schemaversion="3">
+<suite id="s1" name="MultipleBrowser" source="D:\Robot\TestCases\MultipleBrowser.robot">
 <test id="s1-t1" name="Close Browser" line="9">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://testautomationpractice.blogspot.com/</arg>
+<arg>https://google.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230529 22:11:41.249" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
-<msg timestamp="20230529 22:11:41.259" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230529 22:11:41.249" endtime="20230529 22:11:46.744"/>
+<msg timestamp="20230530 04:30:38.700" level="INFO">Opening browser 'chrome' to base url 'https://google.com/'.</msg>
+<msg timestamp="20230530 04:30:38.711" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230530 04:30:38.700" endtime="20230530 04:30:41.357"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230529 22:11:46.745" endtime="20230529 22:11:46.859"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://button[text()='Click Me']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230529 22:11:46.860" level="INFO">Clicking element 'xpath://button[text()='Click Me']'.</msg>
-<status status="PASS" starttime="20230529 22:11:46.860" endtime="20230529 22:11:46.908"/>
+<status status="PASS" starttime="20230530 04:30:41.358" endtime="20230530 04:30:41.472"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230529 22:11:47.917" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20230529 22:11:46.908" endtime="20230529 22:11:47.917"/>
+<msg timestamp="20230530 04:30:42.481" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230530 04:30:41.472" endtime="20230530 04:30:42.481"/>
 </kw>
-<kw name="Alert Should Be Present" library="SeleniumLibrary">
-<arg>Press a button!</arg>
-<doc>Verifies that an alert is present and by default, accepts it.</doc>
-<msg timestamp="20230529 22:11:47.918" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<status status="PASS" starttime="20230529 22:11:47.918" endtime="20230529 22:11:47.927"/>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://bing.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230530 04:30:42.484" level="INFO">Opening browser 'chrome' to base url 'https://bing.com/'.</msg>
+<msg timestamp="20230530 04:30:42.497" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230530 04:30:42.482" endtime="20230530 04:30:44.472"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230530 04:30:44.473" endtime="20230530 04:30:44.595"/>
+</kw>
+<kw name="Switch Browser" library="SeleniumLibrary">
+<arg>1</arg>
+<doc>Switches between active browsers using ``index_or_alias``.</doc>
+<status status="PASS" starttime="20230530 04:30:44.595" endtime="20230530 04:30:44.595"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title1}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230530 04:30:44.602" level="INFO">${title1} = Google</msg>
+<status status="PASS" starttime="20230530 04:30:44.596" endtime="20230530 04:30:44.602"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${title1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230530 04:30:44.603" endtime="20230530 04:30:44.603"/>
+</kw>
+<kw name="Switch Browser" library="SeleniumLibrary">
+<arg>2</arg>
+<doc>Switches between active browsers using ``index_or_alias``.</doc>
+<status status="PASS" starttime="20230530 04:30:44.604" endtime="20230530 04:30:44.604"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title2}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230530 04:30:44.610" level="INFO">${title2} = Bing</msg>
+<status status="PASS" starttime="20230530 04:30:44.604" endtime="20230530 04:30:44.610"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${title2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230530 04:30:44.610" endtime="20230530 04:30:44.611"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230529 22:11:48.933" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20230529 22:11:47.928" endtime="20230529 22:11:48.933"/>
+<msg timestamp="20230530 04:30:45.617" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230530 04:30:44.611" endtime="20230530 04:30:45.617"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230529 22:11:48.935" endtime="20230529 22:11:51.060"/>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230530 04:30:45.617" endtime="20230530 04:30:58.571"/>
 </kw>
-<status status="PASS" starttime="20230529 22:11:41.248" endtime="20230529 22:11:51.062"/>
+<status status="PASS" starttime="20230530 04:30:38.699" endtime="20230530 04:30:58.572"/>
 </test>
-<status status="PASS" starttime="20230529 22:11:41.046" endtime="20230529 22:11:51.067"/>
+<status status="PASS" starttime="20230530 04:30:38.490" endtime="20230530 04:30:58.577"/>
 </suite>
 <statistics>
 <total>
@@ -53,7 +85,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Alerts">Alerts</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="MultipleBrowser">MultipleBrowser</stat>
 </suite>
 </statistics>
 <errors>
