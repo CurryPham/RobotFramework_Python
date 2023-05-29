@@ -1,13 +1,15 @@
 *** Settings ***
 Library    SeleniumLibrary
+Resource    ../Resources/resources.robot
 
 *** Variables ***
 ${browser}  chrome
 ${url}  https://demo.nopcommerce.com/
 
 *** Test Cases ***
-LoginTest
-    open browser    ${url}  ${browser}
+TC1
+    ${PageTitle}=   Launch browser  ${url}  ${browser}
+    log to console    ${PageTitle}
     loginToApplication
     close browser
 

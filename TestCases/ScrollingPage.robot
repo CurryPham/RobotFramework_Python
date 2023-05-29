@@ -1,22 +1,19 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../Resources/resources.robot
 
 *** Variables ***
-${browser}  chrome
-${url}  https://demo.nopcommerce.com/
 
 *** Test Cases ***
 TC1
-    ${PageTitle}=   Launch browser  ${url}  ${browser}
-    log to console    ${PageTitle}
-    loginToApplication
+    open browser    https://www.countries-ofthe-world.com/flags-of-the-world.html   chrome
+    maximize browser window
+#    Execute JavaScript    window.scrollTo(0,7500)
+#    scroll element into view    xpath://td[text()='Spain']
+    Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)    #end of the page
+    sleep    1
+    Execute JavaScript    window.scrollTo(0, -document.body.scrollHeight)    #top of the page
+    sleep    1
     close browser
 
 
 *** Keywords ***
-loginToApplication
-    click link    xpath://a[@class='ico-login']
-    input text    id:Email  test@gmail.com
-    input text    id:Password  123456
-    click element    xpath://button[text()='Log in']

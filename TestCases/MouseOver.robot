@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 *** Variables ***
 
 *** Test Cases ***
-LoginTest
+MouseOver
 #Right click/open context menu
     open browser    https://swisnl.github.io/jQuery-contextMenu/demo.html  chrome
     maximize browser window
