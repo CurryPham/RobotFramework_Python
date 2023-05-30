@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230530 08:19:02.289" rpa="false" schemaversion="3">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="NavigationalKeywords" source="D:\Robot\TestCases\NavigationalKeywords.robot">
+<test id="s1-s1-t1" name="NavigaitionTest" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://google.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230530 08:19:02.508" level="INFO">Opening browser 'chrome' to base url 'https://google.com/'.</msg>
+<msg timestamp="20230530 08:19:02.518" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230530 08:19:02.507" endtime="20230530 08:19:05.525"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230530 08:19:05.525" endtime="20230530 08:19:05.654"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${log}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230530 08:19:05.660" level="INFO">${log} = https://www.google.com/</msg>
+<status status="PASS" starttime="20230530 08:19:05.655" endtime="20230530 08:19:05.660"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${log}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230530 08:19:05.660" endtime="20230530 08:19:05.660"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230530 08:19:08.675" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230530 08:19:05.660" endtime="20230530 08:19:08.675"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://bing.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230530 08:19:08.676" level="INFO">Opening url 'https://bing.com/'</msg>
+<status status="PASS" starttime="20230530 08:19:08.675" endtime="20230530 08:19:09.406"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${log}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230530 08:19:09.412" level="INFO">${log} = https://www.bing.com/?toWww=1&amp;redig=E4D89EBE9838416885DDF6F2D89132EF</msg>
+<status status="PASS" starttime="20230530 08:19:09.406" endtime="20230530 08:19:09.412"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${log}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230530 08:19:09.412" endtime="20230530 08:19:09.412"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230530 08:19:12.420" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230530 08:19:09.412" endtime="20230530 08:19:12.420"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20230530 08:19:12.420" endtime="20230530 08:19:12.445"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${log}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230530 08:19:12.454" level="INFO">${log} = https://www.google.com/</msg>
+<status status="PASS" starttime="20230530 08:19:12.445" endtime="20230530 08:19:12.454"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${log}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230530 08:19:12.454" endtime="20230530 08:19:12.454"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230530 08:19:12.455" endtime="20230530 08:19:14.579"/>
+</kw>
+<status status="PASS" starttime="20230530 08:19:02.507" endtime="20230530 08:19:14.580"/>
+</test>
+<status status="PASS" starttime="20230530 08:19:02.316" endtime="20230530 08:19:14.583"/>
+</suite>
+<status status="PASS" starttime="20230530 08:19:02.301" endtime="20230530 08:19:14.588"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="NavigationalKeywords">Suites.NavigationalKeywords</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

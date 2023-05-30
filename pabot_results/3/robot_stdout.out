@@ -1,0 +1,79 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.DBTesting                                                              
+==============================================================================
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\Robot\TestCases\DBTesting.robot:5
+      Connect To Database    pymysql    ${DBName}    ${DBUser}    ${DBPass}    ${DBHost}    ${DBPort}
+      |  ${DBName} = mydb (str)
+      |  ${DBUser} = root (str)
+      |  ${DBPass} = root (str)
+      |  ${DBHost} = 127.0.0.1 (str)
+      |  ${DBPort} = 3306 (str)
+______________________________________________________________________________
+Create person table                                                   | FAIL |
+Parent suite setup failed:
+OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+------------------------------------------------------------------------------
+Check David record present in Person Table                            | FAIL |
+Parent suite setup failed:
+OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+------------------------------------------------------------------------------
+Check Jio record NOT present in Person Table                          | FAIL |
+Parent suite setup failed:
+OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+------------------------------------------------------------------------------
+Check Person Table exists in mydb Database                            | FAIL |
+Parent suite setup failed:
+OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+------------------------------------------------------------------------------
+Verify Row Count is Zero                                              | FAIL |
+Parent suite setup failed:
+OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+------------------------------------------------------------------------------
+Verify Row Count is Equal to Some Value                               | FAIL |
+Parent suite setup failed:
+OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+------------------------------------------------------------------------------
+Verify Row Count is Greater than to Some Value                        | FAIL |
+Parent suite setup failed:
+OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+------------------------------------------------------------------------------
+Verify Row Count is Less than to Some Value                           | FAIL |
+Parent suite setup failed:
+OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+------------------------------------------------------------------------------
+Update record in person table                                         | FAIL |
+Parent suite setup failed:
+OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+------------------------------------------------------------------------------
+Retrueve Records from Person Table                                    | FAIL |
+Parent suite setup failed:
+OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+------------------------------------------------------------------------------
+Delete Records from Person Table                                      | FAIL |
+Parent suite setup failed:
+OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+------------------------------------------------------------------------------
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\Robot\TestCases\DBTesting.robot:6
+      Disconnect From Database    
+______________________________________________________________________________
+Suites.DBTesting                                                      | FAIL |
+Suite setup failed:
+OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+
+Also suite teardown failed:
+AttributeError: 'NoneType' object has no attribute 'close'
+
+11 tests, 0 passed, 11 failed
+==============================================================================
+Suites                                                                | FAIL |
+11 tests, 0 passed, 11 failed
+==============================================================================
+Output:  D:\Robot\pabot_results\3\output.xml

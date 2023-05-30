@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230530 08:18:05.154" rpa="false" schemaversion="3">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Frames" source="D:\Robot\TestCases\Frames.robot">
+<test id="s1-s1-t1" name="Close Browser" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://netbanking.hdfcbank.com/netbanking/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230530 08:18:05.447" level="INFO">Opening browser 'chrome' to base url 'https://netbanking.hdfcbank.com/netbanking/'.</msg>
+<msg timestamp="20230530 08:18:05.468" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230530 08:18:05.444" endtime="20230530 08:18:09.075"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230530 08:18:09.075" endtime="20230530 08:18:09.192"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>login_page</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230530 08:18:09.193" level="INFO">Selecting frame 'login_page'.</msg>
+<status status="PASS" starttime="20230530 08:18:09.192" endtime="20230530 08:18:09.236"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230530 08:18:09.236" endtime="20230530 08:18:09.239"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230530 08:18:09.239" endtime="20230530 08:18:11.363"/>
+</kw>
+<status status="PASS" starttime="20230530 08:18:05.443" endtime="20230530 08:18:11.363"/>
+</test>
+<status status="PASS" starttime="20230530 08:18:05.186" endtime="20230530 08:18:11.364"/>
+</suite>
+<status status="PASS" starttime="20230530 08:18:05.164" endtime="20230530 08:18:11.366"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Frames">Suites.Frames</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

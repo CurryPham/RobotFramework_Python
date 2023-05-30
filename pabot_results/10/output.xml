@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230530 08:18:36.216" rpa="false" schemaversion="3">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="LoginTest" source="D:\Robot\TestCases\LoginTest.robot">
+<test id="s1-s1-t1" name="LoginTest" line="12">
+<kw name="Open My Browser" library="LoginKeywords">
+<arg>${LOGIN URL}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230530 08:18:36.447" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/login'.</msg>
+<msg timestamp="20230530 08:18:36.458" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230530 08:18:36.447" endtime="20230530 08:18:38.954"/>
+</kw>
+<status status="PASS" starttime="20230530 08:18:36.446" endtime="20230530 08:18:38.954"/>
+</kw>
+<kw name="Input username" library="LoginKeywords">
+<arg>${user}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_loginUserName}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230530 08:18:38.955" level="INFO">Typing text 'test@gmail.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20230530 08:18:38.955" endtime="20230530 08:18:39.042"/>
+</kw>
+<status status="PASS" starttime="20230530 08:18:38.954" endtime="20230530 08:18:39.042"/>
+</kw>
+<kw name="Input password" library="LoginKeywords">
+<arg>${pwd}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_loginPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230530 08:18:39.044" level="INFO">Typing text '123456' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20230530 08:18:39.043" endtime="20230530 08:18:39.128"/>
+</kw>
+<status status="PASS" starttime="20230530 08:18:39.042" endtime="20230530 08:18:39.128"/>
+</kw>
+<kw name="Click login button" library="LoginKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230530 08:18:39.129" level="INFO">Clicking element 'xpath://button[text()='Log in']'.</msg>
+<status status="PASS" starttime="20230530 08:18:39.129" endtime="20230530 08:18:40.389"/>
+</kw>
+<status status="PASS" starttime="20230530 08:18:39.128" endtime="20230530 08:18:40.389"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230530 08:18:41.398" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230530 08:18:40.390" endtime="20230530 08:18:41.398"/>
+</kw>
+<kw name="Verify Successfull Login" library="LoginKeywords">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>nopCommerce demo store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230530 08:18:41.406" level="INFO">Page title is 'nopCommerce demo store'.</msg>
+<status status="PASS" starttime="20230530 08:18:41.399" endtime="20230530 08:18:41.407"/>
+</kw>
+<status status="PASS" starttime="20230530 08:18:41.398" endtime="20230530 08:18:41.407"/>
+</kw>
+<kw name="Close Browser" library="LoginKeywords">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230530 08:18:41.408" endtime="20230530 08:18:47.623"/>
+</kw>
+<status status="PASS" starttime="20230530 08:18:41.407" endtime="20230530 08:18:47.623"/>
+</kw>
+<status status="PASS" starttime="20230530 08:18:36.446" endtime="20230530 08:18:47.623"/>
+</test>
+<status status="PASS" starttime="20230530 08:18:36.243" endtime="20230530 08:18:47.624"/>
+</suite>
+<status status="PASS" starttime="20230530 08:18:36.227" endtime="20230530 08:18:47.627"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="LoginTest">Suites.LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
